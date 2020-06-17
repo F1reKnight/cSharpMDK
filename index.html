@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C#</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script>
+        onfocus="if(this.value == 'какой-то текст') this.value = '' " (если при выделении элемента в нем каходится «какой-то текст», то сделать так, чтобы в нем ничего не находилсь, то есть '' ")
+        onblur="if(this.value.length == 0) this.value = 'какой-то текст'"  (елси при удалении фокуса с элемента в нем находится 0 символов, поместить в этот элемент 'какой-то текст')
+    </script>
+
+</head>
+<body>
+    <header >
+        <nav class="bottomMenu">
+            <a href="index.html">	<img src="Untitled.png" alt="Шапка"></a>
+        </nav>
+    </header>
+    <script type="text/babel" src="react.js"></script>
+
+    <div>
+        <aside id="a" class="list-group-item">
+            <a href="info.html" ><p>Преимущества C#</p></a>
+            <a href="history.html"><p>История развития C#</p></a>
+            <a href="map.html"><p>Карта</p></a>
+            <a href="news.html"><p>News</p></a>
+        </aside>
+    </div>
+    
+        <div style="margin-top: 10px; margin-left: 250px" class = "shadow">
+            <div>
+            <h4>Преимущества C#</h4>
+            <img src="c.jpg" alt="просто Картинка" width="100" height="111" class = "img-responsive">
+            <p>C# является объектно-ориентированным языком, но поддерживает также и компонентно-ориентированное программирование. Разработка современных <a href="info.html">Читать</a> </p>
+            </div>
+        
+    </div>
+    <div style="margin-top: -285px; margin-left: 500px" class = "shadow">
+            <div>
+            <h4>История развития C#</h4>
+            <img src="evolution.jpg" alt="просто Картинка" width="200" height="250" class = "img-responsive">
+            <p> Первая бета-версия C# 1.0 увидела свет летом 2000 года, а в феврале 2002 с<a href="info.html">Читать</a> </p>
+            </div>
+    </div>
+   
+        <div style="margin-top: 50px; margin-left: 375px" class = "shadow">
+            <div>
+            <h4>NEWS</h4>
+            <img src="news.jpg" alt="просто Картинка" width="1000" height="111" class = "img-responsive">
+            <p>Новость <a href="news.html">Читать</a> </p>
+            </div>
+        </div>
+     
+    <div style="margin-top: 400px; margin-left: 0px">
+        <div id="container">
+            <form class="mainform" >
+                <p class="name">
+                    <input type="text" name="name" value="Имя автора" onblur="if(this.value.length == 0) this.value = 'Имя автора'" onfocus="if(this.value == 'Имя автора') this.value = '' "/>
+                    <label for="name">Имя</label>
+                </p>
+                <p class="email">
+                    <input type="text" name="email" value="name@example.com" onblur="if(this.value.length == 0) this.value = 'name@example.com'" onfocus="if(this.value == 'name@example.com') this.value = '' " />
+                    <label for="email" >E-Mail</label>
+                </p>
+                <p class="msg">
+                    <textarea name="msg" onblur="if(this.value.length == 0) this.value = 'Текст сообщения'" onfocus="if(this.value == 'Текст сообщения') this.value=''">Текст сообщения</textarea>
+                </p>
+                <p class="send" >
+                    <input type="submit" value="Отправить"  />
+                </p>
+            </form>
+        </div>
+    </div>
+    <div style="width: 100px; height:50px">
+    <a href="#" id="playButton">Play</a>
+    <script type="text/javascript" src="move.min.js"></script>
+    <script type="text/javascript">
+        document.getElementById('playButton').onclick = function(e){
+            move('.shadow')
+                .rotate(360)
+                .end();
+        };
+    </script>
+    </div>
+</body>
+</html>
+<!--  <div class= "spin">
+       <img src="spinner.jpg">
+   </div>
+
+                 -->
